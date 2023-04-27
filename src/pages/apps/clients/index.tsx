@@ -1,5 +1,5 @@
 import { GetStaticProps, InferGetStaticPropsType } from 'next/types'
-import ClientsTable from '@/components/ClientsTable'
+import ClientsTable from '@/components/clients-table'
 
 const UserList = ({ apiData }: InferGetStaticPropsType<typeof getStaticProps>) => {
 

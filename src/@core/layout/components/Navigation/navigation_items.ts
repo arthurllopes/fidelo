@@ -7,7 +7,7 @@ const navigation = (): VerticalNavItemsType => {
     {
       title: 'Dashboard',
       icon: 'mdi:home-outline',
-      path: '/apps/email'
+      path: '/dashboard'
     },
     {
       sectionTitle: 'Leads'
@@ -35,23 +35,23 @@ const navigation = (): VerticalNavItemsType => {
       children: [
         {
           title: 'Cupoencer',
-          path: '/apps/clients'
+          path: '/apps/campaings/cupoencer'
         },
         {
           title: 'Cupom',
-          path: '/apps/clients'
+          path: '/apps/campaings/cupom'
         },
         {
           title: 'CashBack',
-          path: '/apps/clients/add'
+          path: '/apps/campaings/cashback'
         },
         {
           title: 'Pontos',
-          path: '/apps/clients/add'
+          path: '/apps/campaings/points'
         },
         {
           title: 'Indicação',
-          path: '/apps/clients/add'
+          path: '/apps/campaings/indication'
         },
 
       ]
