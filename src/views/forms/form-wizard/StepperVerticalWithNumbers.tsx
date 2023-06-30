@@ -15,13 +15,14 @@ import StepContent from '@mui/material/StepContent'
 
 // ** Third Party Imports
 import clsx from 'clsx'
-import toast from 'react-hot-toast'
+//import toast from 'react-hot-toast'
 
 // ** Custom Components Imports
 import StepperCustomDot from './StepperCustomDot'
+import StepperWrapper from '@/@core/styles/mui/stepper'
 
 // ** Styled Component
-import StepperWrapper from 'src/@core/styles/mui/stepper'
+//import StepperWrapper from 'src/@core/styles/mui/stepper'
 
 const steps = [
   {
@@ -55,7 +56,7 @@ const StepperVerticalWithNumbers = () => {
   const handleNext = () => {
     setActiveStep(prevActiveStep => prevActiveStep + 1)
     if (activeStep === steps.length - 1) {
-      toast.success('Completed All Steps!!')
+     // toast.success('Completed All Steps!!')
     }
   }
   const handleReset = () => {

@@ -24,18 +24,20 @@ import InputAdornment from '@mui/material/InputAdornment'
 
 // ** Third Party Imports
 import * as yup from 'yup'
-import toast from 'react-hot-toast'
+//import toast from 'react-hot-toast'
 import { useForm, Controller } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 
 // ** Icon Imports
-import Icon from 'src/@core/components/icon'
+//import Icon from 'src/@core/components/icon'
 
 // ** Custom Components Imports
 import StepperCustomDot from './StepperCustomDot'
+import IconifyIcon from '@/@core/fragments/icon'
+import StepperWrapper from '@/@core/styles/mui/stepper'
 
 // ** Styled Components
-import StepperWrapper from 'src/@core/styles/mui/stepper'
+//import StepperWrapper from 'src/@core/styles/mui/stepper'
 
 interface State {
   password: string
@@ -152,7 +154,7 @@ const StepperLinearWithValidation = () => {
   const onSubmit = () => {
     setActiveStep(activeStep + 1)
     if (activeStep === steps.length - 1) {
-      toast.success('Form Submitted')
+      //toast.success('Form Submitted')
     }
   }
 
@@ -254,7 +256,7 @@ const StepperLinearWithValidation = () => {
                               onMouseDown={e => e.preventDefault()}
                               aria-label='toggle password visibility'
                             >
-                              <Icon icon={state.showPassword ? 'mdi:eye-outline' : 'mdi:eye-off-outline'} />
+                              <IconifyIcon icon={state.showPassword ? 'mdi:eye-outline' : 'mdi:eye-off-outline'} />
                             </IconButton>
                           </InputAdornment>
                         }
@@ -296,7 +298,7 @@ const StepperLinearWithValidation = () => {
                               aria-label='toggle password visibility'
                               onClick={handleClickShowConfirmPassword}
                             >
-                              <Icon icon={state.showPassword2 ? 'mdi:eye-outline' : 'mdi:eye-off-outline'} />
+                              <IconifyIcon icon={state.showPassword2 ? 'mdi:eye-outline' : 'mdi:eye-off-outline'} />
                             </IconButton>
                           </InputAdornment>
                         }

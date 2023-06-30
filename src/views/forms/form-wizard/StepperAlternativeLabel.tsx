@@ -21,16 +21,18 @@ import InputAdornment from '@mui/material/InputAdornment'
 import Select, { SelectChangeEvent } from '@mui/material/Select'
 
 // ** Icon Imports
-import Icon from 'src/@core/components/icon'
+//import Icon from 'src/@core/components/icon'
 
 // ** Custom Components Imports
 import StepperCustomDot from './StepperCustomDot'
+import IconifyIcon from '@/@core/fragments/icon'
+import StepperWrapper from '@/@core/styles/mui/stepper'
 
 // ** Third Party Imports
-import toast from 'react-hot-toast'
+//import toast from 'react-hot-toast'
 
 // ** Styled Component
-import StepperWrapper from 'src/@core/styles/mui/stepper'
+//import StepperWrapper from 'src/@core/styles/mui/stepper'
 
 interface State {
   password: string
@@ -81,7 +83,8 @@ const StepperAlternativeLabel = () => {
   const handleNext = () => {
     setActiveStep(prevActiveStep => prevActiveStep + 1)
     if (activeStep === steps.length - 1) {
-      toast.success('Form Submitted')
+      //toast.success('Form Submitted')
+      console.log('submitted')
     }
   }
   const handleReset = () => {
@@ -161,7 +164,7 @@ const StepperAlternativeLabel = () => {
                         onMouseDown={e => e.preventDefault()}
                         aria-label='toggle password visibility'
                       >
-                        <Icon icon={state.showPassword ? 'mdi:eye-outline' : 'mdi:eye-off-outline'} />
+                        <IconifyIcon icon={state.showPassword ? 'mdi:eye-outline' : 'mdi:eye-off-outline'} />
                       </IconButton>
                     </InputAdornment>
                   }
@@ -185,7 +188,7 @@ const StepperAlternativeLabel = () => {
                         aria-label='toggle password visibility'
                         onClick={handleClickShowConfirmPassword}
                       >
-                        <Icon icon={state.showPassword2 ? 'mdi:eye-outline' : 'mdi:eye-off-outline'} />
+                        <IconifyIcon icon={state.showPassword2 ? 'mdi:eye-outline' : 'mdi:eye-off-outline'} />
                       </IconButton>
                     </InputAdornment>
                   }

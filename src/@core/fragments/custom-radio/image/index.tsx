@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid'
 import Radio from '@mui/material/Radio'
 
 // ** Type Imports
-import { CustomRadioImgProps } from 'src/@core/components/custom-radio/types'
+import { CustomRadioImgProps } from '../../custom-radio/types'
 
 const CustomRadioImg = (props: CustomRadioImgProps) => {
   // ** Props
@@ -30,7 +30,7 @@ const CustomRadioImg = (props: CustomRadioImgProps) => {
             border: theme => `2px solid ${theme.palette.divider}`,
             ...(selected === value
               ? { borderColor: `${color}.main` }
-              : { '&:hover': { borderColor: theme => `rgba(${theme.palette.customColors.main}, 0.25)` } }),
+              : { '&:hover': { borderColor: theme => `rgba(${(theme as any).palette?.customColors.main}, 0.25)` } }),
             '& img': {
               width: '100%',
               height: '100%',

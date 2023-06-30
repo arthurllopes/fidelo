@@ -9,7 +9,7 @@ import { Settings } from '../context/useSettings'
 
 export type Layout = 'vertical' | 'horizontal' | 'blank' | 'blankWithAppBar'
 
-export type Skin = 'default' | 'bordered'
+//export type Skin = 'default' | 'bordered'
 
 export type Mode = PaletteMode | 'semi-dark'
 

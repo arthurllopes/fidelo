@@ -5,9 +5,10 @@ import Radio from '@mui/material/Radio'
 import Typography from '@mui/material/Typography'
 
 // ** Type Imports
-import { CustomRadioBasicProps } from 'src/@core/components/custom-radio/types'
+//import { CustomRadioBasicProps } from 'src/@core/components/custom-radio/types'
 
-const CustomRadioBasic = (props: CustomRadioBasicProps) => {
+//CustomRadioBasicProps
+const CustomRadioBasic = (props: any) => {
   // ** Props
   const { name, data, selected, gridProps, handleChange, color = 'primary' } = props
 
@@ -71,7 +72,7 @@ const CustomRadioBasic = (props: CustomRadioBasicProps) => {
             border: theme => `1px solid ${theme.palette.divider}`,
             ...(selected === value
               ? { borderColor: `${color}.main` }
-              : { '&:hover': { borderColor: theme => `rgba(${theme.palette.customColors.main}, 0.25)` } })
+              : { '&:hover': { borderColor: theme => `rgba(${(theme as any).palette.customColors.main}, 0.25)` } })
           }}
         >
           <Radio

@@ -34,12 +34,12 @@ const navigation = (): VerticalNavItemsType => {
       icon: 'ic:outline-sell',
       children: [
         {
-          title: 'Cupoencer',
-          path: '/apps/campaings/cupoencer'
-        },
-        {
           title: 'Cupom',
           path: '/apps/campaings/cupom'
+        },
+        {
+          title: 'Cupoencer',
+          path: '/apps/campaings/cupoencer'
         },
         {
           title: 'CashBack',
@@ -52,6 +52,10 @@ const navigation = (): VerticalNavItemsType => {
         {
           title: 'Indicação',
           path: '/apps/campaings/indication'
+        },
+        {
+          title: 'Clientes Prime',
+          path: '/apps/campaings/prime'
         },
 
       ]
@@ -69,7 +73,7 @@ const navigation = (): VerticalNavItemsType => {
         },
         {
           title: 'Adicionar',
-          path: '/apps/clients/add'
+          path: '/finance/new-sell'
         },
       ]
     },
@@ -115,17 +119,17 @@ const navigation = (): VerticalNavItemsType => {
     {
       title: 'Perfil',
       icon: 'mdi:email-outline',
-      path: '/apps/email'
+      path: '/apps/change'
     },
     {
       title: 'Usuários',
       icon: 'mdi:email-outline',
-      path: '/apps/email'
+      path: '/apps/change'
     },
     {
       title: 'Desenvolvedor',
       icon: 'mdi:email-outline',
-      path: '/apps/email'
+      path: '/apps/change'
     },
     {
       sectionTitle: 'Outros'
@@ -133,17 +137,17 @@ const navigation = (): VerticalNavItemsType => {
     {
       title: 'Conteúdo',
       icon: 'mdi:email-outline',
-      path: '/apps/email'
+      path: '/apps/change'
     },
     {
       title: 'Outros Serviços',
       icon: 'mdi:email-outline',
-      path: '/apps/email'
+      path: '/apps/change'
     },
     {
       title: 'Ajuda',
       icon: 'mdi:email-outline',
-      path: '/apps/email'
+      path: '/apps/change'
     },
   ]
 }

@@ -47,7 +47,7 @@ const themeOptions = (settings: Settings, overrideMode: PaletteMode): ThemeOptio
     palette: {
       primary: {
         ...(mergedThemeConfig.palette
-          ? mergedThemeConfig.palette[themeColor]
+          ? (mergedThemeConfig as any).palette[themeColor]
           : palette(mode === 'semi-dark' ? overrideMode : mode, 'default').primary)
       }
     }

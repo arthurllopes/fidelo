@@ -9,11 +9,7 @@ const DefaultPalette = (mode: Palette['mode'], skin: string): Palette => {
   const mainColor = mode === 'light' ? lightColor : darkColor
 
   const defaultBgColor = () => {
-    if (skin === 'bordered' && mode === 'light') {
-      return whiteColor
-    } else if (skin === 'bordered' && mode === 'dark') {
-      return '#30334E'
-    } else if (mode === 'light') {
+    if (mode === 'light') {
       return '#F7F7F9'
     } else return '#282A42'
   }

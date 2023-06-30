@@ -13,6 +13,10 @@ import MuiMenuItem, { MenuItemProps } from '@mui/material/MenuItem'
 import Typography, { TypographyProps } from '@mui/material/Typography'
 import { Settings } from '@/@core/context/useSettings'
 import { ThemeColor } from '@/@core/layout/types'
+import IconifyIcon from '@/@core/fragments/icon'
+import { Avatar } from '@mui/material'
+import PerfectScrollbar from 'react-perfect-scrollbar'
+
 
 // ** Icon Imports
 
@@ -114,7 +118,7 @@ const ScrollWrapper = ({ children, hidden }: { children: ReactNode; hidden: bool
   if (hidden) {
     return <Box sx={{ maxHeight: 349, overflowY: 'auto', overflowX: 'hidden' }}>{children}</Box>
   } else {
-   // return <PerfectScrollbar options={{ wheelPropagation: false, suppressScrollX: true }}>{children}</PerfectScrollbar>
+    return <PerfectScrollbar options={{ wheelPropagation: false, suppressScrollX: true }}>{children}</PerfectScrollbar>
   }
 }
 
@@ -145,14 +149,14 @@ const NotificationDropdown = (props: Props) => {
       return <Avatar alt={avatarAlt} src={avatarImg} />
     } else if (avatarIcon) {
       return (
-        <Avatar skin='light' color={avatarColor}>
+        <Avatar color={avatarColor}>
           {avatarIcon}
         </Avatar>
       )
     } else {
       return (
-        <Avatar skin='light' color={avatarColor}>
-          {getInitials(avatarText as string)}
+        <Avatar color={avatarColor}>
+          {avatarText?.slice(0,1)}
         </Avatar>
       )
     }
@@ -169,15 +173,15 @@ const NotificationDropdown = (props: Props) => {
             '& .MuiBadge-badge': { top: 4, right: 4, boxShadow: theme => `0 0 0 2px ${theme.palette.background.paper}` }
           }}
         >
-          <Icon icon='mdi:bell-outline' />
+          <IconifyIcon icon='mdi:bell-outline' />
         </Badge>
       </IconButton>
       <Menu
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
         onClose={handleDropdownClose}
-        anchorOrigin={{ vertical: 'bottom', horizontal: direction === 'ltr' ? 'right' : 'left' }}
-        transformOrigin={{ vertical: 'top', horizontal: direction === 'ltr' ? 'right' : 'left' }}
+        anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+        transformOrigin={{ vertical: 'top', horizontal: 'left' }}
       >
         <MenuItem
           disableRipple
@@ -186,13 +190,13 @@ const NotificationDropdown = (props: Props) => {
         >
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
             <Typography sx={{ cursor: 'text', fontWeight: 600 }}>Notifications</Typography>
-            <CustomChip
+            {/*<CustomChip
               skin='light'
               size='small'
               color='primary'
               label={`${notifications.length} New`}
               sx={{ height: 20, fontSize: '0.75rem', fontWeight: 500, borderRadius: '10px' }}
-            />
+            />*/}
           </Box>
         </MenuItem>
         <ScrollWrapper hidden={hidden}>
